@@ -7,7 +7,22 @@ This program is a BOT voor JS8CALL. You can use custom commands to send info to 
 
 #### Telegram
 
-More info follow soon.
+You need a Telegram group channel.
+Then you need to make a telegram bot with a chat @BotFather.
+@BotFather will ask name for your bot and give you a token that you need to change in the config.ini file.
+Also you need chatid of the group you have made, you can do that on special way search on google at the moment, more info will follow on that.
+The chatid you need to change in config.ini.
+
+##### More detailed info follow soon.
+
+
+#### OpenWeatherAPI
+
+Register a account on OpenWeatherMap page.
+Get API token and change it in the config.ini file.
+
+###### More detailed info follow soon.
+
 
 #### JS8CALL 
 
@@ -22,23 +37,22 @@ See picture below for setting in JS8CALL.
 
 ![js8call-settings-js8call-bot](https://user-images.githubusercontent.com/60797474/199588064-5dd681f6-984e-4e30-874b-0bb7659e6045.png)
 
-#### OpenWeatherAPI
-
-More info follow soon.
-
 
 ### TODO:
 ---
 
+If you want options or commands request them in issues.
+
 #### JS8Call
 
-- [x] Add **/HELP** command, give help of what commands u can use. 
+- [x] Add **/HELP** command, give help of what commands u can use in JS8CALL. 
 - [x] Add **/WEATHER** command, get weather from OpenWeatherApi and send to user.
 - [x] Need to add better message capture structure for posting messages in Telegram.
 - [ ] Add **/QSL** command, for capturing callsign when there is a contest.
 
 #### Telegram
 
+- [x] Add **/help** command, give help of what commands u can use in Telegram.
 - [x] Add **/hb** command, send a HeartBeat in JS8CALL
 - [x] Add **/cq** command, send a standard CQ in JS8CALL
 - [x] Add **/ccq** *message* command, send a custom @ALLCALL CQ CQ *message* JO22 in JS8Call
