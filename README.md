@@ -84,6 +84,7 @@ If you like to see new features or commands request them in issues.<br>
 - [ ] Add detailed Telegram installation instructions.
 - [ ] Add detailed OpenWheaterApi installation instructions.
 - [ ] Add detailed Linux/Raspberry installation instructions.
+- [ ] Add detailed Windows installation instructions.
 
 #### Telegram-Bot
 
