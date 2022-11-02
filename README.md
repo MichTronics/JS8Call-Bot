@@ -23,7 +23,7 @@ Also you need the chatid of the group you have created, you can do that on<br>
 special way, search on google at the moment more detailed info will follow.<br>
 The chatid you need to change in config.ini.<br>
 
-##### More detailed info follow soon.
+###### More detailed info follow soon.
 
 
 #### OpenWeatherAPI
