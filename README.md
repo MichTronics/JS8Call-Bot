@@ -2,14 +2,14 @@
 This program is a BOT voor JS8CALL. You can use custom commands to send info to user. Also you can make QSO from out of a Telegram channel. The messages from JS8Call wil als be posted in Telegram Channel.
 
 
-## INSTALLATION:
-----
+### INSTALLATION:
+---
 More info follow soon.
 
 
 
-## TODO:
-----
+### TODO:
+---
 
 JS8Call
 
