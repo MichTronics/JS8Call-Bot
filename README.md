@@ -32,18 +32,18 @@ More info follow soon.
 
 #### JS8Call
 
-- [x] Add /HELP command, give help of what commands u can use. 
-- [x] Add /WEATHER command, get weather from OpenWeatherApi and send to user.
+- [x] Add **/HELP** command, give help of what commands u can use. 
+- [x] Add **/WEATHER** command, get weather from OpenWeatherApi and send to user.
 - [x] Need to add better message capture structure for posting messages in Telegram.
-- [ ] Add /QSL command, for capturing callsign when there is a contest.
+- [ ] Add **/QSL** command, for capturing callsign when there is a contest.
 
 #### Telegram
 
-- [x] Add "/hb" command, send a HeartBeat in JS8CALL
-- [x] Add "/cq" command, send a CQ in JS8CALL
-- [x] Add "/ccq message" command, send a custom @ALLCALL CQ CQ "message" JO22 in JS8Call
-- [x] Add "/rc callsign message" command, send a message to callsign in JS8Call
-- [ ] Add "/snr callsign" command, send a message to ask "callsign" SNR? in JS8Call
+- [x] Add **/hb** command, send a HeartBeat in JS8CALL
+- [x] Add **/cq** command, send a standard CQ in JS8CALL
+- [x] Add **/ccq** *message* command, send a custom @ALLCALL CQ CQ *message* JO22 in JS8Call
+- [x] Add **/rc** *callsign* *message* command, send a *callsign*>*message* in JS8Call
+- [ ] Add **/snr** *callsign* command, send a message to ask *callsign* SNR? in JS8Call
 
 
 
