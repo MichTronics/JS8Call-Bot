@@ -20,10 +20,10 @@ JS8Call
 
 TELEGRAM
 
-- [x] Add /hb command, send a @HB heartbeat in JS8CALL
-- [x] Add /cq command, send a @ALLCALL CQ CQ JO22 in JS8CALL
-- [x] Add /ccq <\message> command, send a custom @ALLCALL CQ CQ <\message> JO22 in JS8Call
-- [x] Add /rc <\callsign> <\message> command, send a message to callsign in JS8Call
-- [ ] Add /snr <\callsign> command, send a message to callsign to ask <\callsign> SNR? in JS8Call
+- [x] Add /hb command, send a HeartBeat in JS8CALL
+- [x] Add /cq command, send a CQ in JS8CALL
+- [x] Add /ccq "message" command, send a custom @ALLCALL CQ CQ "message" JO22 in JS8Call
+- [x] Add /rc "callsign" "message" command, send a message to callsign in JS8Call
+- [ ] Add /snr "callsign" command, send a message to callsign to ask "callsign" SNR? in JS8Call
 
 
