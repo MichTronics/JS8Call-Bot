@@ -1,5 +1,8 @@
 # JS8Call-Bot
-This program is a BOT voor JS8CALL. You can use custom commands to send info to remote user in JS8Call. Also you can make QSO in telegram from out of a Telegram channel. The messages from JS8Call wil als be posted in Telegram Channel.
+This program is a BOT voor JS8CALL.<br> 
+You can use it to send custom commands to JS8Call.<br>
+Also you can make QSO in telegram from out of a Telegram channel.<br>
+The messages from JS8Call wil als be posted in Telegram Channel.<br>
 
 
 ### INSTALLATION:
@@ -7,40 +10,41 @@ This program is a BOT voor JS8CALL. You can use custom commands to send info to 
 
 #### JS8Call-Bot
 
-Change the Locator in config.ini
-Change Host and Port in config.ini if use other pc where JS8CALL is runningc than JS8Call-Bot.
-Change Callsign in config.ini
+Change the Locator in config.ini<br>
+Change Host and Port in config.ini if use other pc where JS8CALL is runningc than JS8Call-Bot.<br>
+Change Callsign in config.ini.<br>
 
 #### Telegram
 
-You need a Telegram group channel.
-Then you need to make a telegram bot with a chat @BotFather.
-@BotFather will ask name for your bot and give you a token that you need to change in the config.ini file.
-Also you need chatid of the group you have made, you can do that on special way search on google at the moment, more info will follow on that.
-The chatid you need to change in config.ini.
+You need a Telegram group channel.<br>
+Then you need to make a telegram bot with a chat @BotFather.<br>
+@BotFather will ask name for your bot and give you a token that you need to change in the config.ini file.<br>
+Also you need the chatid of the group you have created, you can do that on<br>
+special way, search on google at the moment more detailed info will follow.<br>
+The chatid you need to change in config.ini.<br>
 
 ##### More detailed info follow soon.
 
 
 #### OpenWeatherAPI
 
-Register a account on OpenWeatherMap page.
-Get API token and change it in the config.ini file.
-And change the loction to get the weather of your location
+Register a account on OpenWeatherMap page.<br>
+Get API token and change it in the config.ini file.<br>
+And change the loction in config.ini so that remote user get the weather of your location when the remote user send a /WEATHER.<br>
 
 ###### More detailed info follow soon.
 
 
 #### JS8CALL 
 
-Settings in JS8CALL for using the JS8Call-Bot.
-Goto settings in JS8CALL and then goto the Reporting Tab, enable this settings below in the API window.
+Settings in JS8CALL for using the JS8Call-Bot.<br>
+Goto settings in JS8CALL and then goto the Reporting Tab, enable this settings below in the API window.<br>
 
 - [x] Allow setting station information from the API
 - [x] Enable TCP Server API
 - [x] Accept TCP Requests
 
-See picture below for setting in JS8CALL.
+See picture below for setting in JS8CALL.<br>
 
 ![js8call-settings-js8call-bot](https://user-images.githubusercontent.com/60797474/199588064-5dd681f6-984e-4e30-874b-0bb7659e6045.png)
 
@@ -48,7 +52,7 @@ See picture below for setting in JS8CALL.
 ### TODO:
 ---
 
-If you want options or commands request them in issues.
+If you want options or commands request them in issues.<br>
 
 #### JS8Call
 
