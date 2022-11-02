@@ -21,7 +21,7 @@ bot = Bot(token=config['DEFAULT']['TelegramToken'])
 dp = Dispatcher(bot)
 
 
-### JS8CALL ###
+### JS8Call-Bot ###
 
 async def start_js8call_bot():
     reader, writer = await asyncio.open_connection(config['DEFAULT']['Host'], config['DEFAULT']['Port'])
@@ -84,7 +84,7 @@ def send(*args, **kwargs):
     client_socket.send((message + '\n').encode()) # remember to send the newline at the end :)
 
 
-### Telegram ###
+### Telegram-Bot ###
 
 # Send message to Telegram Group
 def send_to_telegram(message):
@@ -130,6 +130,6 @@ async def reply_to_js8(message: types.Message):
     send("TX.SEND_MESSAGE", "@HB HEARTBEAT " + locatorMod) 
     await message.reply("HeartBeat sending..")
 
-# Starting JS8EXT en Telegram-BOT
+# Starting JS8Call-Bot en Telegram-Bot
 threading.Thread(target=asyncio.run, args=(start_js8call_bot(),),daemon=True).start()
 threading.Thread(target=executor.start_polling(dp, skip_updates=True,),daemon=True).start()
