@@ -11,9 +11,8 @@ More info follow soon.
 
 #### JS8CALL 
 
-Settings in JS8Call for using the JS8Call-Bot in the API window.
-
-Goto settings of JS8CALL and then goto the Reporting Tab there enable this setting :
+Settings in JS8CALL for using the JS8Call-Bot.
+Goto settings in JS8CALL and then goto the Reporting Tab, enable this settings below in the API window.
 
 - [x] Allow setting station information from the API
 - [x] Enable TCP Server API
