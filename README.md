@@ -1,4 +1,4 @@
-## JS8Call-Bot
+# JS8Call-Bot
 This program is a BOT voor JS8CALL. You can use custom commands to send info to user. Also you can make QSO from out of a Telegram channel. The messages from JS8Call wil als be posted in Telegram Channel.
 
 
@@ -14,7 +14,7 @@ TODO:
 JS8Call
 
 - [x] Add /HELP command, give help of what commands u can use. 
-- [x] Add /WEATHER commnad, get weather from OpenWeatherApi and send to user.
+- [x] Add /WEATHER command, get weather from OpenWeatherApi and send to user.
 - [ ] Need to add better message capture structure for posting messages in Telegram.
 
 
