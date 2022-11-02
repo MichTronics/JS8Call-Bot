@@ -1,7 +1,7 @@
 # JS8Call-Bot
 This program is a BOT voor JS8CALL.<br> 
 You can use it to send custom commands to JS8CALL.<br>
-Also you can make QSO in telegram from out of a Telegram channel.<br>
+Also you can make QSO in telegram from out of a Telegram Channel.<br>
 The messages from JS8CALL will also be posted in Telegram Channel.<br>
 
 
@@ -19,7 +19,7 @@ The messages from JS8CALL will also be posted in Telegram Channel.<br>
 #### Config JS8Call-Bot
 
 Change the Locator in config.ini<br>
-Change Host and Port in config.ini if use other pc where JS8CALL is runningc than JS8Call-Bot.<br>
+Change Host and Port in config.ini if use other pc where JS8CALL is running than JS8Call-Bot.<br>
 Change Callsign in config.ini.<br>
 
 #### Config Telegram-Bot
