@@ -10,11 +10,17 @@ The messages from JS8CALL will also be posted in Telegram Channel.<br>
 
 #### Installation instructions Windows
 
+Download latest release and extract it with winzip,winrar,7zip in a folder you have created.
+Change the config.ini file more info below.
+Run the JS8Call-Bot.exe in the JS8Call-Bot map that was created with extracting.
+
 ###### More detailed info follow soon.
+
 
 #### Installation instructions Linux
 
 ###### More detailed info follow soon.
+
 
 #### Config JS8Call-Bot
 
@@ -22,8 +28,8 @@ Change the Locator in config.ini<br>
 Change Host and Port in config.ini if use other pc where JS8CALL is running than JS8Call-Bot.<br>
 Change Callsign in config.ini.<br>
 
-#### Config Telegram-Bot
 
+#### Config Telegram-Bot
 
 You need a Telegram group channel.<br>
 Then you need to make a telegram bot with a chat @BotFather read this<br> 
@@ -65,6 +71,7 @@ See picture below for setting in JS8CALL.<br>
 ---
 
 If you like to see new features or commands request them in issues.<br>
+
 
 #### JS8Call-Bot
 
