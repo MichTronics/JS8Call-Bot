@@ -4,23 +4,38 @@ This program is a BOT voor JS8CALL. You can use custom commands to send info to 
 
 ### INSTALLATION:
 ---
+
+#### Telegram
+
 More info follow soon.
 
+#### JS8CALL 
+
+Settings in JS8Call for using the JS8Call-Bot in the API window
+- [x] Allow setting station information from the API
+- [x] Enable TCP Server API
+- [x] Accept TCP Requests
+
+See picture below for setting in JS8CALL.
 
 ![js8call-settings-js8call-bot](https://user-images.githubusercontent.com/60797474/199588064-5dd681f6-984e-4e30-874b-0bb7659e6045.png)
+
+#### OpenWeatherAPI
+
+More info follow soon.
 
 
 ### TODO:
 ---
 
-JS8Call
+#### JS8Call
 
 - [x] Add /HELP command, give help of what commands u can use. 
 - [x] Add /WEATHER command, get weather from OpenWeatherApi and send to user.
 - [x] Need to add better message capture structure for posting messages in Telegram.
 - [ ] Add /QSL command, for capturing callsign when there is a contest.
 
-TELEGRAM
+#### Telegram
 
 - [x] Add /hb command, send a HeartBeat in JS8CALL
 - [x] Add /cq command, send a CQ in JS8CALL
