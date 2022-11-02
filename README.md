@@ -10,9 +10,10 @@ The messages from JS8CALL will also be posted in Telegram Channel.<br>
 
 #### Installation instructions Windows
 
-Download latest release and extract it with winzip,winrar,7zip in a folder you have created.
-Change the config.ini file more info below.
-Run the JS8Call-Bot.exe in the JS8Call-Bot map that was created with extracting.
+Download latest release on the right under releases, and extract<br>
+it with winzip,winrar,7zip in a folder you have created.<br>
+Change the config.ini file inside de JS8Call-Bot/config folder more info about de config.ini below.<br>
+Run the JS8Call-Bot.exe in the JS8Call-Bot map that was created with extracting.<br>
 
 ###### More detailed info follow soon.
 
