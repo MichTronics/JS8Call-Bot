@@ -1,20 +1,28 @@
 # JS8Call-Bot
 This program is a BOT voor JS8CALL.<br> 
-You can use it to send custom commands to JS8Call.<br>
+You can use it to send custom commands to JS8CALL.<br>
 Also you can make QSO in telegram from out of a Telegram channel.<br>
-The messages from JS8Call wil als be posted in Telegram Channel.<br>
+The messages from JS8CALL will also be posted in Telegram Channel.<br>
 
 
 ### INSTALLATION:
 ---
 
-#### JS8Call-Bot
+#### Installation instructions Windows
+
+###### More detailed info follow soon.
+
+#### Installation instructions Linux
+
+###### More detailed info follow soon.
+
+#### Config JS8Call-Bot
 
 Change the Locator in config.ini<br>
 Change Host and Port in config.ini if use other pc where JS8CALL is runningc than JS8Call-Bot.<br>
 Change Callsign in config.ini.<br>
 
-#### Telegram
+#### Config Telegram-Bot
 
 You need a Telegram group channel.<br>
 Then you need to make a telegram bot with a chat @BotFather.<br>
@@ -26,7 +34,7 @@ The chatid you need to change in config.ini.<br>
 ###### More detailed info follow soon.
 
 
-#### OpenWeatherAPI
+#### Config OpenWeatherAPI
 
 Register a account on OpenWeatherMap page.<br>
 Get API token and change it in the config.ini file.<br>
