@@ -52,16 +52,20 @@ See picture below for setting in JS8CALL.<br>
 ### TODO:
 ---
 
-If you want options or commands request them in issues.<br>
+If you want new options or commands request them in issues.<br>
 
-#### JS8Call
+#### JS8Call-Bot
 
 - [x] Add **/HELP** command, give help of what commands u can use in JS8CALL. 
 - [x] Add **/WEATHER** command, get weather from your location on OpenWeatherApi and send it to user.
 - [x] Need to add better message capture structure for posting messages in Telegram.
 - [ ] Add **/QSL** command, for capturing callsign when there is a contest.
+- [x] Add detailed installation instructions how to config JS8CALL for JS8Call-Bot.
+- [ ] Add detailed Telegram installation instructions.
+- [ ] Add detailed OpenWheaterApi installation instructions.
+- [ ] Add detailed Linux/Raspberry installation instructions.
 
-#### Telegram
+#### Telegram-Bot
 
 - [x] Add **/help** command, give help of what commands u can use in Telegram.
 - [x] Add **/hb** command, send a HeartBeat in JS8CALL
