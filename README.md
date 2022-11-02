@@ -7,6 +7,8 @@ This program is a BOT voor JS8CALL. You can use custom commands to send info to 
 More info follow soon.
 
 
+![js8call-settings-js8call-bot](https://user-images.githubusercontent.com/60797474/199588064-5dd681f6-984e-4e30-874b-0bb7659e6045.png)
+
 
 ### TODO:
 ---
@@ -25,5 +27,6 @@ TELEGRAM
 - [x] Add /ccq "message" command, send a custom @ALLCALL CQ CQ "message" JO22 in JS8Call
 - [x] Add /rc "callsign" "message" command, send a message to callsign in JS8Call
 - [ ] Add /snr "callsign" command, send a message to callsign to ask "callsign" SNR? in JS8Call
+
 
 
