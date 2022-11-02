@@ -38,7 +38,7 @@ async def start_js8call_bot():
             commandS = commandD.split('\n')
             rxd = json.loads(commandS[0])
             params = rxd['params']
-            if params['TO'] == "19WO1934":
+            if params['TO'] == config['DEFAULT']['Callsign']:
                 send_to_telegram(params['TEXT'])
                 print('-> Receivied Message : ', params['TEXT'])
                 if '/HELP' in params['TEXT']:

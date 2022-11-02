@@ -5,6 +5,12 @@ This program is a BOT voor JS8CALL. You can use custom commands to send info to 
 ### INSTALLATION:
 ---
 
+#### JS8Call-Bot
+
+Change the Locator in config.ini
+Change Host and Port in config.ini if use other pc where JS8CALL is runningc than JS8Call-Bot.
+Change Callsign in config.ini
+
 #### Telegram
 
 You need a Telegram group channel.
@@ -20,6 +26,7 @@ The chatid you need to change in config.ini.
 
 Register a account on OpenWeatherMap page.
 Get API token and change it in the config.ini file.
+And change the loction to get the weather of your location
 
 ###### More detailed info follow soon.
 
@@ -46,7 +53,7 @@ If you want options or commands request them in issues.
 #### JS8Call
 
 - [x] Add **/HELP** command, give help of what commands u can use in JS8CALL. 
-- [x] Add **/WEATHER** command, get weather from OpenWeatherApi and send to user.
+- [x] Add **/WEATHER** command, get weather from your location on OpenWeatherApi and send it to user.
 - [x] Need to add better message capture structure for posting messages in Telegram.
 - [ ] Add **/QSL** command, for capturing callsign when there is a contest.
 
