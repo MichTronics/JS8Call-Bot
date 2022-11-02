@@ -29,9 +29,10 @@ You need a Telegram group channel.<br>
 Then you need to make a telegram bot with a chat @BotFather read this<br> 
 page https://docs.influxdata.com/kapacitor/v1.6/event_handlers/telegram/ the Telegram Setup section.<br>
 @BotFather will ask name for your bot and give you a token that you need to change in the config.ini file.<br>
-Then add the bot to the telegram group channel invite him as user @**BotName**(name of bot you created in step before).
-Also you need the chatid of the group you have created, you can do that on<br>
-special way, use this page for it https://docs.influxdata.com/kapacitor/v1.6/event_handlers/telegram/ , more detailed info will follow.<br>
+Then add the bot to the telegram group channel invite him as<br>
+user @**BotName**(name of bot you created in step before).<br>
+Also you need the chatid of the group you have created, you can do that on special way, use this page for<br> 
+it https://docs.influxdata.com/kapacitor/v1.6/event_handlers/telegram/ , more detailed info will follow.<br>
 The chatid you need to change in config.ini.<br>
 
 ###### More detailed info follow soon.
