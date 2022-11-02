@@ -70,9 +70,9 @@ If you want new options or commands request them in issues.<br>
 - [x] Add **/help** command, give help of what commands u can use in Telegram.
 - [x] Add **/hb** command, send a HeartBeat in JS8CALL
 - [x] Add **/cq** command, send a standard CQ in JS8CALL
-- [x] Add **/ccq** *message* command, send a custom @ALLCALL CQ CQ *message* JO22 in JS8Call
-- [x] Add **/rc** *callsign* *message* command, send a *callsign*>*message* in JS8Call
-- [ ] Add **/snr** *callsign* command, send a message to ask *callsign* SNR? in JS8Call
+- [x] Add **/ccq** *message* command, send a custom @ALLCALL CQ CQ *message* JO22 in JS8CALL
+- [x] Add **/rc** *callsign* *message* command, send a *callsign*>*message* in JS8CALL
+- [ ] Add **/snr** *callsign* command, send a message to ask *callsign* SNR? in JS8CALL
 
 
 
