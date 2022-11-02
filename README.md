@@ -15,8 +15,8 @@ JS8Call
 
 - [x] Add /HELP command, give help of what commands u can use. 
 - [x] Add /WEATHER command, get weather from OpenWeatherApi and send to user.
-- [ ] Need to add better message capture structure for posting messages in Telegram.
-
+- [x] Need to add better message capture structure for posting messages in Telegram.
+- [] Add /QSL command, for capturing callsign when there is contest.
 
 TELEGRAM
 
