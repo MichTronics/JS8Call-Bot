@@ -31,37 +31,19 @@ async def start_js8call_bot():
         command = await reader.read(65500)
         if not command:
             break
-        try:
-            data = json.loads(command)
-        except ValueError:
-            data = {}
-        if not data:
-            continue
-        # print(data['params'])
-        # print(data['type'])
-        # print(data['value'])
-        print(data)
-        params = data['params']
-        type = data['type']
-        value =  data['value']
-        # print(f"TO -> {params['TO']}")
-        if 'RX.DIRECTED' in type:
-            print(data)
-        if data['value'] == 'on':
-            continue
-        elif data['value'] == 'off':
-            continue
-        else:
-            send_to_telegram(data['value'])
-        try:
+        # print(command)
+        commandD = command.decode()
+
+        if 'RX.DIRECTED' in commandD:
+            commandS = commandD.split('\n')
+            rxd = json.loads(commandS[0])
+            params = rxd['params']
             if params['TO'] == "19WO1934":
                 send_to_telegram(params['TEXT'])
-                print('-> params: ', params['TEXT'])
+                print('-> Receivied Message : ', params['TEXT'])
                 if '/HELP' in params['TEXT']:
-                    #print("succes")
-                    send("TX.SEND_MESSAGE", "{}>COMMANDS: /WEATHER", params['FROM'])
+                    send("TX.SEND_MESSAGE", params['FROM'] + ">COMMANDS: /HELP /WEATHER")
                 elif '/WEATHER' in params['TEXT']:
-                    #print("weather")
                     OPENWEATHER_URL = "http://api.openweathermap.org/data/2.5/weather?"
                     complete_url = OPENWEATHER_URL + "appid=" + config['DEFAULT']['OpenWeatherToken'] + "&q=" + config['DEAFULT']['WheaterLocation']
                     response = requests.get(complete_url)
@@ -69,8 +51,19 @@ async def start_js8call_bot():
                     if x["cod"] != "404":
                         y = x["main"]
                         send("TX.SEND_MESSAGE", params['FROM'] + ">WEATHER IS : TEMP = " + str(y["temp"]) + " , PRESS = " + str(y["pressure"]) + " , HUM = " + str(y["humidity"]))
-        except KeyError:
-            pass
+            else:
+                send_to_telegram(params['TEXT'])
+    
+        try:
+            data = json.loads(commandD)
+        except ValueError:
+            data = {}
+        if not data:
+            continue
+        if data['value'] == 'on':
+            continue
+        elif data['value'] == 'off':
+            continue
 
 # Convert JS8CALL message
 def to_message(typ, value='', params=None):
