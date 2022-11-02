@@ -60,7 +60,7 @@ See picture below for setting in JS8CALL.<br>
 ### TODO:
 ---
 
-If you want new options or commands request them in issues.<br>
+If you like to see new features or commands request them in issues.<br>
 
 #### JS8Call-Bot
 
