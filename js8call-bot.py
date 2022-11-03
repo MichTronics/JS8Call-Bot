@@ -27,20 +27,17 @@ async def start_js8call_bot():
     reader, writer = await asyncio.open_connection(config['DEFAULT']['Host'], config['DEFAULT']['Port'])
 
     while True:
-        # print("[-] Awaiting commands...")
         command = await reader.read(65500)
         if not command:
             break
-        # print(command)
         commandD = command.decode()
-
         if 'RX.DIRECTED' in commandD:
             commandS = commandD.split('\n')
             rxd = json.loads(commandS[0])
             params = rxd['params']
             if params['TO'] == config['DEFAULT']['Callsign']:
-                send_to_telegram(params['TEXT'])
-                print('-> Receivied Message : ', params['TEXT'])
+                send_to_telegram(params['OFFSET'] + " -> " + config['DEFAULT']['Callsign'] + " : " + params['TEXT'])
+                print(f"-> RX_DIRECTED : ", params)
                 if '/HELP' in params['TEXT']:
                     send("TX.SEND_MESSAGE", params['FROM'] + ">COMMANDS: /HELP /WEATHER")
                 elif '/WEATHER' in params['TEXT']:
@@ -52,8 +49,15 @@ async def start_js8call_bot():
                         y = x["main"]
                         send("TX.SEND_MESSAGE", params['FROM'] + ">WEATHER IS : TEMP = " + str(y["temp"]) + " , PRESS = " + str(y["pressure"]) + " , HUM = " + str(y["humidity"]))
             else:
-                send_to_telegram(params['TEXT'])
-    
+                print(f"-> RX_DIRECTED : ", params)
+                send_to_telegram(str(params['OFFSET']) + " -> RX_DIR : " + params['TEXT'])
+
+        elif 'RX.ACTIVITY' in commandD:
+            commandS = commandD.split('\n')
+            x = json.loads(commandS[0])
+            print(f"-> RX_ACTIVITY : ", x)
+            send_to_telegram(str(x['params']['OFFSET']) + " -> RX_ACT : " + x['value'])
+
         try:
             data = json.loads(commandD)
         except ValueError:
