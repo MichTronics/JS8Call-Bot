@@ -30,33 +30,43 @@ async def start_js8call_bot():
         command = await reader.read(65500)
         if not command:
             break
+        # print(command)
         commandD = command.decode()
         if 'RX.DIRECTED' in commandD:
             commandS = commandD.split('\n')
-            rxd = json.loads(commandS[0])
-            params = rxd['params']
-            if params['TO'] == config['DEFAULT']['Callsign']:
-                send_to_telegram(params['OFFSET'] + " -> " + config['DEFAULT']['Callsign'] + " : " + params['TEXT'])
-                print(f"-> RX_DIRECTED : ", params)
-                if '/HELP' in params['TEXT']:
-                    send("TX.SEND_MESSAGE", params['FROM'] + ">COMMANDS: /HELP /WEATHER")
-                elif '/WEATHER' in params['TEXT']:
-                    OPENWEATHER_URL = "http://api.openweathermap.org/data/2.5/weather?"
-                    complete_url = OPENWEATHER_URL + "appid=" + config['DEFAULT']['OpenWeatherToken'] + "&q=" + config['DEAFULT']['WheaterLocation']
-                    response = requests.get(complete_url)
-                    x = response.json()
-                    if x["cod"] != "404":
-                        y = x["main"]
-                        send("TX.SEND_MESSAGE", params['FROM'] + ">WEATHER IS : TEMP = " + str(y["temp"]) + " , PRESS = " + str(y["pressure"]) + " , HUM = " + str(y["humidity"]))
-            else:
-                print(f"-> RX_DIRECTED : ", params)
-                send_to_telegram(str(params['OFFSET']) + " -> RX_DIR : " + params['TEXT'])
+            for i in range(len(commandS)-1):
+            # print(x)
+                rxd = json.loads(commandS[i])
+                params = rxd['params']
+                # print(params)
+                try:
+                    if params['TO'] == config['DEFAULT']['Callsign']:
+                        send_to_telegram(str(params['OFFSET']) + " -> " + config['DEFAULT']['Callsign'] + " : " + params['TEXT'])
+                        print(f"-> RX_DIRECTED : ", params)
+                        if '/HELP' in params['TEXT']:
+                            send("TX.SEND_MESSAGE", params['FROM'] + ">COMMANDS: /HELP /WEATHER")
+                        elif '/WEATHER' in params['TEXT']:
+                            OPENWEATHER_URL = "http://api.openweathermap.org/data/2.5/weather?"
+                            complete_url = OPENWEATHER_URL + "appid=" + config['DEFAULT']['OpenWeatherToken'] + "&q=" + config['DEAFULT']['WheaterLocation']
+                            response = requests.get(complete_url)
+                            x = response.json()
+                            if x["cod"] != "404":
+                                y = x["main"]
+                                send("TX.SEND_MESSAGE", params['FROM'] + ">WEATHER IS : TEMP = " + str(y["temp"]) + " , PRESS = " + str(y["pressure"]) + " , HUM = " + str(y["humidity"]))
+                    else:
+                        print(f"-> RX_DIRECTED : ", params)
+                        send_to_telegram(str(params['OFFSET']) + " -> RX_DIR : " + params['TEXT'])
+                except KeyError:
+                    pass
 
         elif 'RX.ACTIVITY' in commandD:
             commandS = commandD.split('\n')
-            x = json.loads(commandS[0])
-            print(f"-> RX_ACTIVITY : ", x)
-            send_to_telegram(str(x['params']['OFFSET']) + " -> RX_ACT : " + x['value'])
+            print(len(commandS))
+            for i in range(len(commandS)-1):
+                print(commandS[i])
+                x = json.loads(commandS[i])
+                print(f"-> RX_ACTIVITY : ", commandS[i])
+                send_to_telegram(str(x['params']['OFFSET']) + " -> RX_ACT : " + x['value'])
 
         try:
             data = json.loads(commandD)
