@@ -30,15 +30,12 @@ async def start_js8call_bot():
         command = await reader.read(65500)
         if not command:
             break
-        # print(command)
         commandD = command.decode()
         if 'RX.DIRECTED' in commandD:
             commandS = commandD.split('\n')
             for i in range(len(commandS)-1):
-            # print(x)
                 rxd = json.loads(commandS[i])
                 params = rxd['params']
-                # print(params)
                 try:
                     if params['TO'] == config['DEFAULT']['Callsign']:
                         send_to_telegram(str(params['OFFSET']) + " -> " + config['DEFAULT']['Callsign'] + " : " + params['TEXT'])
@@ -55,18 +52,16 @@ async def start_js8call_bot():
                                 send("TX.SEND_MESSAGE", params['FROM'] + ">WEATHER IS : TEMP = " + str(y["temp"]) + " , PRESS = " + str(y["pressure"]) + " , HUM = " + str(y["humidity"]))
                     else:
                         print(f"-> RX_DIRECTED : ", params)
-                        send_to_telegram(str(params['OFFSET']) + " -> RX_DIR : " + params['TEXT'])
+                        send_to_telegram(str(params['OFFSET']) + " -> " + params['TEXT'])
                 except KeyError:
                     pass
 
         elif 'RX.ACTIVITY' in commandD:
             commandS = commandD.split('\n')
-            print(len(commandS))
             for i in range(len(commandS)-1):
-                print(commandS[i])
                 x = json.loads(commandS[i])
                 print(f"-> RX_ACTIVITY : ", commandS[i])
-                send_to_telegram(str(x['params']['OFFSET']) + " -> RX_ACT : " + x['value'])
+                send_to_telegram(str(x['params']['OFFSET']) + " -> " + x['value'])
 
         try:
             data = json.loads(commandD)
@@ -143,6 +138,7 @@ async def reply_to_js8(message: types.Message):
     locatorMod = locator[:6-2]
     send("TX.SEND_MESSAGE", "@HB HEARTBEAT " + locatorMod) 
     await message.reply("HeartBeat sending..")
+
 
 # Starting JS8Call-Bot en Telegram-Bot
 threading.Thread(target=asyncio.run, args=(start_js8call_bot(),),daemon=True).start()
